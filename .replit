@@ -1,0 +1,9 @@
+run = "make run"
+entrypoint = "cprog.c"
+compile = "make progs"
+
+[languages.c]
+pattern = "**/*.{c,h}"
+
+[languages.c.languageServer]
+start = ["ccls", "--init", "'{\"cache\": {\"directory\": \"/tmp/ccls-cache\"}}'"]
